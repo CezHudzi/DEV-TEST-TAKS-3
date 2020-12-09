@@ -20,5 +20,12 @@ Algorithm groups nodes (represented by number) to array. One array represents on
    
  arrayOfGraphs.size = 2
  
- 
-
+ Algorithm: <br>
+ input = [X, 1, 2, 3, 5, 6, 5] <br>
+ For X times <br> 
+ Take first pair <br>
+ &nbsp;&nbsp;Check if any of the number from the pair is in any of graphArray in arrayOfGraphs. <br>
+ &nbsp;&nbsp;If yes add the pair to suitable graphArray <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If found 2 graphArrays join graphArrays to one graphArray <br>
+ &nbsp;&nbsp;If not create new graphArray then add pair and add graphArray to arrayOfGraphs <br>
+ Repet with next pair <br>
