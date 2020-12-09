@@ -4,46 +4,37 @@ import java.util.*;
 
 public class GraphCalculator {
 
-    public int countSeparetedGraphs(int[] input) {
+    public int countSeparatedGraphs(int[] input) {
 
-        List<Set<Integer>> grupList = new ArrayList<>();
+        List<Set<Integer>> groupList = new ArrayList<>();
 
         for (int i = 1; i <= input[0]; i++) {
             boolean tmpAdded = false;
-            Set firstSetFound = new HashSet<>();
-            for (Set set : grupList) {
-                if (!tmpAdded) {
-                    if (set.contains(input[i * 2 - 1]) || set.contains(input[i * 2])) {
-                        set.add(input[i * 2 - 1]);
-                        set.add(input[i * 2]);
+            Set<Integer> firstSetFound = new HashSet<>();
+            for (Set<Integer> set : groupList) {
+
+                if (set.contains(input[i * 2 - 1]) || set.contains(input[i * 2])) {
+                    set.add(input[i * 2 - 1]);
+                    set.add(input[i * 2]);
+                    if (!tmpAdded) {
                         firstSetFound = set;
                         tmpAdded = true;
-                    }
-                }
-                else {
-                    if (set.contains(input[i * 2 - 1]) || set.contains(input[i * 2])) {
-                        set.add(input[i * 2 - 1]);
-                        set.add(input[i * 2]);
+                    } else {
                         firstSetFound.addAll(set);
-                        grupList.remove(set);
+                        groupList.remove(set);
                         break;
                     }
                 }
-
             }
             if (!tmpAdded) {
                 Set<Integer> newSet = new HashSet<>();
                 newSet.add(input[i * 2 - 1]);
                 newSet.add(input[i * 2]);
-                grupList.add(newSet);
+                groupList.add(newSet);
             }
         }
-
-
-        return grupList.size();
+        return groupList.size();
     }
-
-
 
 
 }

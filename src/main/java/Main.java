@@ -12,7 +12,7 @@ public class Main {
         Arrays.stream(args).forEach(System.out::println);
 
         int[] input = StringArrToIntArr(args);
-        graphCalculator.countSeparetedGraphs(input);
+        graphCalculator.countSeparatedGraphs(input);
 
     }
 
