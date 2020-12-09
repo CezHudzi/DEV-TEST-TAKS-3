@@ -12,7 +12,7 @@ Algorithm groups nodes (represented by number) to array. One array represents on
  
  input = [3, 1, 2, 3, 5, 6, 5] 
  
- output will be a size of arrays of grups:
+ output will be a size of arrays of graphs:
  
  arrayOfGraphs: <br/>
    &nbsp;&nbsp; - [1,2] (first graph)<br/>
