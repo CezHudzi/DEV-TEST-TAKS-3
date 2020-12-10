@@ -21,7 +21,7 @@ Algorithm groups nodes (represented by number) to array. One array represents on
  arrayOfGraphs.size = 2
  
  Algorithm: <br>
- input = [X, 1, 2, 3, 5, 6, 5] <br>
+ input = [X, ...] <br>
  For X times <br> 
  Take first pair <br>
  &nbsp;&nbsp;Check if any of the number from the pair is in any of graphArray in arrayOfGraphs. <br>
